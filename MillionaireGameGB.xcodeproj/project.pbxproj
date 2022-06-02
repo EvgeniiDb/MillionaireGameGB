@@ -21,6 +21,9 @@
 		E69B2FEE2846935D00E47B59 /* GameResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69B2FED2846935D00E47B59 /* GameResult.swift */; };
 		E69B2FF12846A96300E47B59 /* ResultsCarataker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69B2FF02846A96300E47B59 /* ResultsCarataker.swift */; };
 		E69B2FF42846B61F00E47B59 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69B2FF32846B61F00E47B59 /* GameViewController.swift */; };
+		E69B2FF72849605300E47B59 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69B2FF62849605300E47B59 /* ResultsViewController.swift */; };
+		E69B2FFA2849608F00E47B59 /* GameResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69B2FF82849608F00E47B59 /* GameResultTableViewCell.swift */; };
+		E69B2FFB2849608F00E47B59 /* GameResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E69B2FF92849608F00E47B59 /* GameResultTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		E69B2FED2846935D00E47B59 /* GameResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResult.swift; sourceTree = "<group>"; };
 		E69B2FF02846A96300E47B59 /* ResultsCarataker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsCarataker.swift; sourceTree = "<group>"; };
 		E69B2FF32846B61F00E47B59 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		E69B2FF62849605300E47B59 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		E69B2FF82849608F00E47B59 /* GameResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultTableViewCell.swift; sourceTree = "<group>"; };
+		E69B2FF92849608F00E47B59 /* GameResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameResultTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +133,19 @@
 				E69B2FCF284567E700E47B59 /* MenuViewController.swift */,
 				E69B2FE8284688F600E47B59 /* GameSession.swift */,
 				E69B2FF32846B61F00E47B59 /* GameViewController.swift */,
+				E69B2FF62849605300E47B59 /* ResultsViewController.swift */,
+				E69B2FF52849600D00E47B59 /* ResultsCell */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E69B2FF52849600D00E47B59 /* ResultsCell */ = {
+			isa = PBXGroup;
+			children = (
+				E69B2FF82849608F00E47B59 /* GameResultTableViewCell.swift */,
+				E69B2FF92849608F00E47B59 /* GameResultTableViewCell.xib */,
+			);
+			path = ResultsCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E69B2FFB2849608F00E47B59 /* GameResultTableViewCell.xib in Resources */,
 				E69B2FDB284567E800E47B59 /* LaunchScreen.storyboard in Resources */,
 				E69B2FD8284567E800E47B59 /* Assets.xcassets in Resources */,
 				E69B2FD3284567E700E47B59 /* Main.storyboard in Resources */,
@@ -204,6 +222,7 @@
 			files = (
 				E69B2FD0284567E700E47B59 /* MenuViewController.swift in Sources */,
 				E69B2FEC284692E800E47B59 /* Question.swift in Sources */,
+				E69B2FFA2849608F00E47B59 /* GameResultTableViewCell.swift in Sources */,
 				E69B2FE72846806800E47B59 /* Game.swift in Sources */,
 				E69B2FCC284567E700E47B59 /* AppDelegate.swift in Sources */,
 				E69B2FD6284567E700E47B59 /* MillionaireGameGB.xcdatamodeld in Sources */,
@@ -213,6 +232,7 @@
 				E69B2FEE2846935D00E47B59 /* GameResult.swift in Sources */,
 				E69B2FF42846B61F00E47B59 /* GameViewController.swift in Sources */,
 				E69B2FF12846A96300E47B59 /* ResultsCarataker.swift in Sources */,
+				E69B2FF72849605300E47B59 /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

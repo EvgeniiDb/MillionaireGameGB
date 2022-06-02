@@ -25,7 +25,7 @@ class MenuViewController: UIViewController {
                 let session = GameSession(totalQuestions: questions.count)
                 
                 vc.questions = questions
-                vc.GameDataDelegate = session
+                vc.gameDataDelegate = session
                 Game.shared.session = session
             }
         case "resultsSegue":

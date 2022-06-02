@@ -9,7 +9,7 @@ import Foundation
 
 class GameSession {
     private var totalQuestions: Int
-    private var correctAnsvers: Int
+    private var correctAnsvers: Int = 0
     private var isStoppedByGamer = false
     private var rewards = [50000, 100000, 250000, 500000, 1000000]
     private var reward: Int {
@@ -29,10 +29,15 @@ class GameSession {
     }
 }
 
+
 extension GameSession: GameDataDelegate {
-    func elevateCorrectAnswer() {
+    func increaseCorrectAnswer() {
         self.correctAnsvers += 1
     }
+    
+//    func elevateCorrectAnswer() {
+//        self.correctAnsvers += 1
+//    }
     
     func getReward() -> Int {
         return self.rewards[correctAnsvers-1]

@@ -9,7 +9,7 @@ import Foundation
 
 
 protocol GameDataDelegate: AnyObject {
-    func elevateCorrectAnswer()
+    func increaseCorrectAnswer()
     func getReward() -> Int
     func stopByUser()
     func saveResult()

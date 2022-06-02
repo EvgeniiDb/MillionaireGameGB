@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -30,7 +31,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vp0-WZ-b9H" kind="show" id="eFW-Sq-Kcw"/>
+                                    <segue destination="vp0-WZ-b9H" kind="show" identifier="gameSegue" id="eFW-Sq-Kcw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IzF-Sj-XGr">
@@ -123,14 +124,10 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKs-Pt-b8O">
-                                <rect key="frame" x="147" y="164" width="120" height="45"/>
-                                <color key="tintColor" red="0.98023337125778198" green="0.93649238348007202" blue="0.97264069318771362" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="6we-ZO-je8"/>
-                                    <constraint firstAttribute="width" constant="120" id="JOq-Ic-BNE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="35"/>
-                                <color key="textColor" red="0.98023337125778198" green="0.93649238348007202" blue="0.97264069318771362" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="20" y="164" width="374" height="29"/>
+                                <color key="tintColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ur-q5-MNQ">
@@ -174,6 +171,8 @@
                             <constraint firstItem="1ur-q5-MNQ" firstAttribute="top" secondItem="eTR-OG-orC" secondAttribute="bottom" constant="25" id="aCU-rf-GFO"/>
                             <constraint firstItem="vhj-IH-iXs" firstAttribute="bottom" secondItem="1ur-q5-MNQ" secondAttribute="bottom" constant="55" id="b0Z-Ie-c2r"/>
                             <constraint firstItem="55l-tC-dya" firstAttribute="leading" secondItem="vhj-IH-iXs" secondAttribute="leading" constant="20" id="gCi-aW-dIh"/>
+                            <constraint firstItem="vhj-IH-iXs" firstAttribute="trailing" secondItem="YKs-Pt-b8O" secondAttribute="trailing" constant="20" id="paw-6r-POj"/>
+                            <constraint firstItem="YKs-Pt-b8O" firstAttribute="leading" secondItem="vhj-IH-iXs" secondAttribute="leading" constant="20" id="r9V-sQ-ZX9"/>
                             <constraint firstItem="eTR-OG-orC" firstAttribute="leading" secondItem="vhj-IH-iXs" secondAttribute="leading" constant="20" id="sdp-Hf-iEU"/>
                             <constraint firstItem="1ur-q5-MNQ" firstAttribute="leading" secondItem="vhj-IH-iXs" secondAttribute="leading" constant="20" id="tgh-G7-vho"/>
                             <constraint firstItem="55l-tC-dya" firstAttribute="top" secondItem="x2K-o9-dGj" secondAttribute="bottom" constant="25" id="tsh-3c-gsJ"/>
@@ -204,16 +203,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="e5k-OF-lUr">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e5k-OF-lUr" id="4Ca-rT-rs7">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="gaQ-hD-qzj" id="ytn-Mj-HUY"/>
                             <outlet property="delegate" destination="gaQ-hD-qzj" id="z3t-bc-Yce"/>
@@ -231,6 +220,9 @@
         <image name="person.2.fill" catalog="system" width="128" height="80"/>
         <image name="power.circle.fill" catalog="system" width="128" height="121"/>
         <image name="teletype.answer" catalog="system" width="128" height="89"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

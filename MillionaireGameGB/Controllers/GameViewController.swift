@@ -71,7 +71,7 @@ class GameViewController: UIViewController {
     }
     
     @objc func correctAnswerHandle(sender: UIButton) {
-        gameDataDelegate?.elevateCorrectAnswer()
+        gameDataDelegate?.increaseCorrectAnswer()
         
         if questions.indices.contains(currentQuestionIndex+1) {
             currentQuestionIndex += 1
@@ -114,7 +114,7 @@ class GameViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         }
     }
-    // кнопки ниже привязать
+    
     @IBAction func hintCall(_ sender: UIButton) {
         sender.isEnabled = false
         showHintAlert(title: "Звонок другу", text: "Ваш друг подсказывает, что скорее всего правильный ответ - \(correctAnswer)")
