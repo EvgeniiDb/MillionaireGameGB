@@ -106,8 +106,8 @@ class GameViewController: UIViewController {
                                            attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)])
         let closeAction = UIAlertAction(title: "Спасибо!", style: .cancel)
         
-        alert.setValue(titleString, forKey: "atributedTitle")
-        alert.setValue(msgString, forKey: "atributedMessage")
+        alert.setValue(titleString, forKey: "attributedTitle")
+        alert.setValue(msgString, forKey: "attributedMessage")
         alert.addAction(closeAction)
         
         DispatchQueue.main.async {

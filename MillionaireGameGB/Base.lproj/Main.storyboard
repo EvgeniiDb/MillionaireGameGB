@@ -123,7 +123,7 @@
                                     <constraint firstAttribute="height" constant="50" id="M9r-LO-7Eq"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKs-Pt-b8O">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKs-Pt-b8O">
                                 <rect key="frame" x="20" y="164" width="374" height="29"/>
                                 <color key="tintColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
@@ -154,11 +154,21 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="M1" translatesAutoresizingMaskIntoConstraints="NO" id="HrY-yV-kpC">
+                                <rect key="frame" x="87" y="369.5" width="240" height="167"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Z1Y-XA-c1R"/>
+                                    <constraint firstAttribute="height" constant="167" id="aaD-lZ-U36"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vhj-IH-iXs"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="x2K-o9-dGj" firstAttribute="leading" secondItem="vhj-IH-iXs" secondAttribute="leading" constant="20" id="0F0-TP-HDP"/>
+                            <constraint firstItem="vhj-IH-iXs" firstAttribute="trailing" secondItem="HrY-yV-kpC" secondAttribute="trailing" constant="87" id="34c-WB-CYo"/>
+                            <constraint firstItem="HrY-yV-kpC" firstAttribute="centerY" secondItem="vhj-IH-iXs" secondAttribute="centerY" id="8WZ-FI-Ajv"/>
+                            <constraint firstItem="HrY-yV-kpC" firstAttribute="leading" secondItem="vhj-IH-iXs" secondAttribute="leading" constant="87" id="BHw-Qi-GFA"/>
                             <constraint firstItem="vhj-IH-iXs" firstAttribute="trailing" secondItem="55l-tC-dya" secondAttribute="trailing" constant="20" id="CBx-jX-82M"/>
                             <constraint firstItem="vhj-IH-iXs" firstAttribute="trailing" secondItem="1ur-q5-MNQ" secondAttribute="trailing" constant="20" id="Kpb-fJ-pdh"/>
                             <constraint firstItem="vhj-IH-iXs" firstAttribute="trailing" secondItem="eTR-OG-orC" secondAttribute="trailing" constant="20" id="Lig-ol-YR4"/>
@@ -166,6 +176,7 @@
                             <constraint firstItem="XRA-Wx-PKY" firstAttribute="leading" secondItem="vhj-IH-iXs" secondAttribute="leading" constant="20" id="SE2-Yp-CV6"/>
                             <constraint firstItem="vhj-IH-iXs" firstAttribute="trailing" secondItem="XRA-Wx-PKY" secondAttribute="trailing" constant="20" id="SeJ-h7-p5n"/>
                             <constraint firstItem="vhj-IH-iXs" firstAttribute="trailing" secondItem="x2K-o9-dGj" secondAttribute="trailing" constant="20" id="UK4-L8-g9L"/>
+                            <constraint firstItem="HrY-yV-kpC" firstAttribute="centerX" secondItem="vhj-IH-iXs" secondAttribute="centerX" id="WLC-pf-V8Y"/>
                             <constraint firstItem="XRA-Wx-PKY" firstAttribute="top" secondItem="vhj-IH-iXs" secondAttribute="top" constant="20" id="X3z-7e-3L7"/>
                             <constraint firstItem="YKs-Pt-b8O" firstAttribute="top" secondItem="XRA-Wx-PKY" secondAttribute="bottom" constant="50" id="Y3Q-Gh-BkB"/>
                             <constraint firstItem="1ur-q5-MNQ" firstAttribute="top" secondItem="eTR-OG-orC" secondAttribute="bottom" constant="25" id="aCU-rf-GFO"/>
@@ -195,10 +206,10 @@
             </objects>
             <point key="canvasLocation" x="818.84057971014499" y="-210.26785714285714"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Results View Controller-->
         <scene sceneID="y2x-0j-u4g">
             <objects>
-                <tableViewController id="gaQ-hD-qzj" sceneMemberID="viewController">
+                <tableViewController id="gaQ-hD-qzj" customClass="ResultsViewController" customModule="MillionaireGameGB" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="doJ-P3-oLa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
