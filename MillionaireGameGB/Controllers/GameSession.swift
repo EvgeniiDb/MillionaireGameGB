@@ -35,9 +35,6 @@ extension GameSession: GameDataDelegate {
         self.correctAnsvers += 1
     }
     
-//    func elevateCorrectAnswer() {
-//        self.correctAnsvers += 1
-//    }
     
     func getReward() -> Int {
         return self.rewards[correctAnsvers-1]
