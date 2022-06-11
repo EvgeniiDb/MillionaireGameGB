@@ -30,9 +30,6 @@ class QuestionsViewController: UIViewController {
     
     @IBAction func addRow(_ sender: Any) {
         numberOfRows += 1
-//        tableView.beginUpdates()
-//        tableView.insertRows(at: [IndexPath(row: numberOfRows-1, section: 0)], with: .automatic)
-//        tableView.endUpdates()
     }
     
     
