@@ -6,10 +6,10 @@
 //
 
 import UIKit
-import Foundation
 
 class GameViewController: UIViewController {
 
+    @IBOutlet weak var correctAnswerLabel: UILabel!
     @IBOutlet weak var helpByCallBtn: UIButton!
     @IBOutlet weak var helpBySpectatorsBtn: UIButton!
     @IBOutlet weak var helpBy50Btn: UIButton!
@@ -25,17 +25,26 @@ class GameViewController: UIViewController {
     private var answerButtons: [UIButton] = []
     private var currentQuestionIndex: Int = 0
     private var correctAnswer: String = ""
+    var difficultyStrategy: DifficultyStrategyProtocol?
     var questions: [Question] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        difficultyStrategy?.questionsOrder(questions: &questions)
         answerButtons = [answerBtnA, answerBtnB, answerBtnC, answerBtnD]
-        buttonConf()
+        buttonsConf()
         setScene()
+        
+        Game.shared.session?.correctAnswers.addObserver(self, options: [.new, .initial], closure: {
+            [weak self] (count, _) in
+            guard let self = self else { return }
+            self.correctAnswerLabel.text = "Правильных ответов: \(count) из \(Game.shared.session!.totalQuestions)"
+        })
     }
     
-    private func buttonConf() {
+    private func buttonsConf() {
         for button in answerButtons {
             button.layer.borderWidth = 2
             button.layer.borderColor = CGColor(red: 0.178, green: 0.376, blue: 0.855, alpha: 1)
@@ -54,8 +63,10 @@ class GameViewController: UIViewController {
             button.setTitle(questionItem.answers[i], for: .normal)
             button.removeTarget(nil, action: nil, for: .touchUpInside)
             
-            let targetSelector = questionItem.correctAnswerIndex == i ? #selector(self.correctAnswerHandle) : #selector(self.wrongAnswerHandle)
+            let targetSelector = questionItem.correctAnswerIndex == i ?
+                #selector(self.correctAnswerHandle) : #selector(self.wrongAnswerHandle)
             button.addTarget(self, action: targetSelector, for: .touchUpInside)
+            button.isHidden = false
         }
     }
     
@@ -152,7 +163,8 @@ class GameViewController: UIViewController {
         
         if currentQuestionIndex > 0, let reward = gameDataDelegate?.getReward() {
             let formattedReward = Game.shared.numberFormatter.string(from: NSNumber(value: reward))
-            let msgString = NSAttributedString(string: "Завершить игру и забрать выигрыш \(formattedReward)?", attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)])
+            let msgString = NSAttributedString(string: "Завершить игру и забрать выигрыш \(formattedReward!)?",
+                                               attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)])
             alert.setValue(msgString, forKey: "attributedMessage")
         }
             
@@ -163,5 +175,4 @@ class GameViewController: UIViewController {
                 self.present(alert, animated: true, completion: nil)
         }
     }
-    
 }

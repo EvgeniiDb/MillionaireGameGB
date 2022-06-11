@@ -24,6 +24,12 @@ class MenuViewController: UIViewController {
                 let questions = generateQuestions()
                 let session = GameSession(totalQuestions: questions.count)
                 
+                switch Game.shared.difficulty {
+                case .hard:
+                    vc.difficultyStrategy = HardDifficultyStrategy()
+                default:
+                    vc.difficultyStrategy = EasyDifficultyStrategy()
+                }
                 vc.questions = questions
                 vc.gameDataDelegate = session
                 Game.shared.session = session
@@ -59,9 +65,5 @@ class MenuViewController: UIViewController {
             ),
         ]
     }
-    
-    
-    
-
 }
 
