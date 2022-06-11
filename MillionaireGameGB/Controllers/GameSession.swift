@@ -8,13 +8,16 @@
 import Foundation
 
 class GameSession {
-    private var totalQuestions: Int
-    private var correctAnsvers: Int = 0
+    var totalQuestions: Int
+    var correctAnswers = Observable<Int>(0)
     private var isStoppedByGamer = false
-    private var rewards = [50000, 100000, 250000, 500000, 1000000]
+    private let maxReward: Float = 1000000
+    private var rewardPerQuestion: Int = 0
     private var reward: Int {
-        if isStoppedByGamer && correctAnsvers > 0 || totalQuestions == correctAnsvers {
-            return rewards[correctAnsvers-1]
+        
+        if isStoppedByGamer && correctAnswers.value > 0 || totalQuestions == correctAnswers.value {
+            return totalQuestions == correctAnswers.value ? Int(maxReward) :
+            correctAnswers.value*rewardPerQuestion
         } else {
             return 0
         }
@@ -22,22 +25,23 @@ class GameSession {
     
     init(totalQuestions: Int) {
         self.totalQuestions = totalQuestions
+        self.rewardPerQuestion = Int(maxReward / Float(totalQuestions))
     }
     
     func calcReward() -> Int {
-        return correctAnsvers > 0 ? rewards[correctAnsvers-1] : 0
+        return correctAnswers.value > 0 ? correctAnswers.value*rewardPerQuestion : 0
     }
 }
 
 
 extension GameSession: GameDataDelegate {
     func increaseCorrectAnswer() {
-        self.correctAnsvers += 1
+        self.correctAnswers.value += 1
     }
     
     
     func getReward() -> Int {
-        return self.rewards[correctAnsvers-1]
+        return correctAnswers.value*rewardPerQuestion
     }
     
     func stopByUser() {
@@ -46,7 +50,7 @@ extension GameSession: GameDataDelegate {
     
     func saveResult() {
         DispatchQueue.global().async {
-            let newResult = GameResult(date: Date(), correctAnswers: self.correctAnsvers, reward:
+            let newResult = GameResult(date: Date(), correctAnswers: self.correctAnswers.value, reward:
                 self.reward)
             let resultsCaretaker = ResultsCaretaker()
             var results = resultsCaretaker.load() ?? []

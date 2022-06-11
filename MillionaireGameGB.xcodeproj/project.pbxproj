@@ -24,6 +24,17 @@
 		E69B2FF72849605300E47B59 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69B2FF62849605300E47B59 /* ResultsViewController.swift */; };
 		E69B2FFA2849608F00E47B59 /* GameResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69B2FF82849608F00E47B59 /* GameResultTableViewCell.swift */; };
 		E69B2FFB2849608F00E47B59 /* GameResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E69B2FF92849608F00E47B59 /* GameResultTableViewCell.xib */; };
+		E6F45CBD284F637F0037722F /* QuestionsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F45CBC284F637F0037722F /* QuestionsCaretaker.swift */; };
+		E6F45CC0284F7BD40037722F /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F45CBF284F7BD40037722F /* Observable.swift */; };
+		E6F45CC3284FB6790037722F /* DifficultyStrategyProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F45CC2284FB6790037722F /* DifficultyStrategyProtocol.swift */; };
+		E6F45CC5284FB72B0037722F /* EasyDifficultyStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F45CC4284FB72B0037722F /* EasyDifficultyStrategy.swift */; };
+		E6F45CC7284FB7CE0037722F /* HardDifficultyStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F45CC6284FB7CE0037722F /* HardDifficultyStrategy.swift */; };
+		E6F45CCA284FB8AE0037722F /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F45CC9284FB8AE0037722F /* Difficulty.swift */; };
+		E6F45CCC284FBBAB0037722F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F45CCB284FBBAB0037722F /* SettingsViewController.swift */; };
+		E6F45CCE284FE16E0037722F /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F45CCD284FE16E0037722F /* QuestionsViewController.swift */; };
+		E6F45CD1284FE49D0037722F /* QuestionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F45CD0284FE49D0037722F /* QuestionBuilder.swift */; };
+		E6F45CD5284FF03D0037722F /* NewQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F45CD3284FF03D0037722F /* NewQuestionTableViewCell.swift */; };
+		E6F45CD6284FF03D0037722F /* NewQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6F45CD4284FF03D0037722F /* NewQuestionTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +57,17 @@
 		E69B2FF62849605300E47B59 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		E69B2FF82849608F00E47B59 /* GameResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultTableViewCell.swift; sourceTree = "<group>"; };
 		E69B2FF92849608F00E47B59 /* GameResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameResultTableViewCell.xib; sourceTree = "<group>"; };
+		E6F45CBC284F637F0037722F /* QuestionsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsCaretaker.swift; sourceTree = "<group>"; };
+		E6F45CBF284F7BD40037722F /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		E6F45CC2284FB6790037722F /* DifficultyStrategyProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DifficultyStrategyProtocol.swift; sourceTree = "<group>"; };
+		E6F45CC4284FB72B0037722F /* EasyDifficultyStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyDifficultyStrategy.swift; sourceTree = "<group>"; };
+		E6F45CC6284FB7CE0037722F /* HardDifficultyStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HardDifficultyStrategy.swift; sourceTree = "<group>"; };
+		E6F45CC9284FB8AE0037722F /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
+		E6F45CCB284FBBAB0037722F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		E6F45CCD284FE16E0037722F /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		E6F45CD0284FE49D0037722F /* QuestionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBuilder.swift; sourceTree = "<group>"; };
+		E6F45CD3284FF03D0037722F /* NewQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuestionTableViewCell.swift; sourceTree = "<group>"; };
+		E6F45CD4284FF03D0037722F /* NewQuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewQuestionTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,10 +100,15 @@
 		E69B2FCA284567E700E47B59 /* MillionaireGameGB */ = {
 			isa = PBXGroup;
 			children = (
+				E6F45CCF284FE4870037722F /* Builder */,
 				E69B2FF22846B3BB00E47B59 /* Controllers */,
 				E69B2FEF2846A93500E47B59 /* Memento */,
+				E6F45CD2284FF00F0037722F /* NewQuestionsView */,
+				E6F45CC8284FB88D0037722F /* Objects */,
+				E6F45CBE284F7BB20037722F /* Observable */,
 				E69B2FE228467E5D00E47B59 /* Protocols */,
 				E69B2FE52846801500E47B59 /* Singleton */,
+				E6F45CC1284FB6290037722F /* Strategy */,
 				E69B2FEA284692B400E47B59 /* Models */,
 				E69B2FCB284567E700E47B59 /* AppDelegate.swift */,
 				E69B2FCD284567E700E47B59 /* SceneDelegate.swift */,
@@ -123,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				E69B2FF02846A96300E47B59 /* ResultsCarataker.swift */,
+				E6F45CBC284F637F0037722F /* QuestionsCaretaker.swift */,
 			);
 			path = Memento;
 			sourceTree = "<group>";
@@ -130,10 +158,12 @@
 		E69B2FF22846B3BB00E47B59 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E69B2FCF284567E700E47B59 /* MenuViewController.swift */,
+				E6F45CCD284FE16E0037722F /* QuestionsViewController.swift */,
 				E69B2FE8284688F600E47B59 /* GameSession.swift */,
 				E69B2FF32846B61F00E47B59 /* GameViewController.swift */,
+				E69B2FCF284567E700E47B59 /* MenuViewController.swift */,
 				E69B2FF62849605300E47B59 /* ResultsViewController.swift */,
+				E6F45CCB284FBBAB0037722F /* SettingsViewController.swift */,
 				E69B2FF52849600D00E47B59 /* ResultsCell */,
 			);
 			path = Controllers;
@@ -146,6 +176,49 @@
 				E69B2FF92849608F00E47B59 /* GameResultTableViewCell.xib */,
 			);
 			path = ResultsCell;
+			sourceTree = "<group>";
+		};
+		E6F45CBE284F7BB20037722F /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				E6F45CBF284F7BD40037722F /* Observable.swift */,
+			);
+			path = Observable;
+			sourceTree = "<group>";
+		};
+		E6F45CC1284FB6290037722F /* Strategy */ = {
+			isa = PBXGroup;
+			children = (
+				E6F45CC2284FB6790037722F /* DifficultyStrategyProtocol.swift */,
+				E6F45CC4284FB72B0037722F /* EasyDifficultyStrategy.swift */,
+				E6F45CC6284FB7CE0037722F /* HardDifficultyStrategy.swift */,
+			);
+			path = Strategy;
+			sourceTree = "<group>";
+		};
+		E6F45CC8284FB88D0037722F /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				E6F45CC9284FB8AE0037722F /* Difficulty.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		E6F45CCF284FE4870037722F /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				E6F45CD0284FE49D0037722F /* QuestionBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		E6F45CD2284FF00F0037722F /* NewQuestionsView */ = {
+			isa = PBXGroup;
+			children = (
+				E6F45CD3284FF03D0037722F /* NewQuestionTableViewCell.swift */,
+				E6F45CD4284FF03D0037722F /* NewQuestionTableViewCell.xib */,
+			);
+			path = NewQuestionsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6F45CD6284FF03D0037722F /* NewQuestionTableViewCell.xib in Resources */,
 				E69B2FFB2849608F00E47B59 /* GameResultTableViewCell.xib in Resources */,
 				E69B2FDB284567E800E47B59 /* LaunchScreen.storyboard in Resources */,
 				E69B2FD8284567E800E47B59 /* Assets.xcassets in Resources */,
@@ -221,16 +295,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				E69B2FD0284567E700E47B59 /* MenuViewController.swift in Sources */,
+				E6F45CC0284F7BD40037722F /* Observable.swift in Sources */,
 				E69B2FEC284692E800E47B59 /* Question.swift in Sources */,
+				E6F45CCC284FBBAB0037722F /* SettingsViewController.swift in Sources */,
+				E6F45CC5284FB72B0037722F /* EasyDifficultyStrategy.swift in Sources */,
 				E69B2FFA2849608F00E47B59 /* GameResultTableViewCell.swift in Sources */,
 				E69B2FE72846806800E47B59 /* Game.swift in Sources */,
 				E69B2FCC284567E700E47B59 /* AppDelegate.swift in Sources */,
+				E6F45CCE284FE16E0037722F /* QuestionsViewController.swift in Sources */,
+				E6F45CC3284FB6790037722F /* DifficultyStrategyProtocol.swift in Sources */,
 				E69B2FD6284567E700E47B59 /* MillionaireGameGB.xcdatamodeld in Sources */,
+				E6F45CD5284FF03D0037722F /* NewQuestionTableViewCell.swift in Sources */,
 				E69B2FE9284688F600E47B59 /* GameSession.swift in Sources */,
+				E6F45CC7284FB7CE0037722F /* HardDifficultyStrategy.swift in Sources */,
 				E69B2FE428467E9900E47B59 /* GameDataDelegate.swift in Sources */,
 				E69B2FCE284567E700E47B59 /* SceneDelegate.swift in Sources */,
 				E69B2FEE2846935D00E47B59 /* GameResult.swift in Sources */,
+				E6F45CBD284F637F0037722F /* QuestionsCaretaker.swift in Sources */,
+				E6F45CD1284FE49D0037722F /* QuestionBuilder.swift in Sources */,
 				E69B2FF42846B61F00E47B59 /* GameViewController.swift in Sources */,
+				E6F45CCA284FB8AE0037722F /* Difficulty.swift in Sources */,
 				E69B2FF12846A96300E47B59 /* ResultsCarataker.swift in Sources */,
 				E69B2FF72849605300E47B59 /* ResultsViewController.swift in Sources */,
 			);

@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import UIKit
 
 struct GameResult: Codable {
     let date: Date
